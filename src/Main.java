@@ -30,5 +30,21 @@ public class Main {
         System.out.println(ex2.max(test2));
         System.out.println(ex2.maxSum(test2));
         System.out.println(ex2.minSum(test2));
+
+        ex3 ex3 = new ex3();
+        int[] nr1 = new int[]{1, 2, 0, 0 ,0 ,0 };
+        int[] nr2 = new int[]{8, 3, 0, 0 ,0 ,0 };
+        for (int i : ex3.sum(nr1, nr2)) {
+            System.out.println(i);
+        }
+        for (int i : ex3.dif(nr2, nr1)) {
+            System.out.println(i);
+        }
+        for (int i : ex3.mul(nr2, 2)) {
+            System.out.println(i);
+        }
+        for (int i : ex3.div(nr1, 3)) {
+            System.out.println(i);
+        }
     }
 }
