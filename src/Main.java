@@ -17,11 +17,18 @@ public class Main {
 //        System.out.println(ex1.failedGrades(new ArrayList<Integer>{40, 50, 38, 70}));
 //        system.ex1.failedGrades([40, 50, 38, 70]);
 
-        for(int i : ex1.roundedGrades(test)){
+        for (int i : ex1.roundedGrades(test)) {
             System.out.println(i);
         }
         System.out.println(ex1.maxRounded(test));
         System.out.println(ex1.average(test));
-        System.out.printf("%.2f%n",ex1.average(test));
+        System.out.printf("%.2f%n", ex1.average(test));
+
+        ex2 ex2 = new ex2();
+        int[] test2 = new int[]{4, 8, 3, 10, 17};
+        System.out.println(ex2.min(test2));
+        System.out.println(ex2.max(test2));
+        System.out.println(ex2.maxSum(test2));
+        System.out.println(ex2.minSum(test2));
     }
 }
