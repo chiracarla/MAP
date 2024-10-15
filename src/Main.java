@@ -1,7 +1,9 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 import lab1.*;
+
 import static org.junit.Assert.assertEquals;
+
 import java.util.ArrayList;
 
 public class Main {
@@ -33,8 +35,8 @@ public class Main {
         System.out.println(ex2.minSum(test2));
 
         ex3 ex3 = new ex3();
-        int[] nr1 = new int[]{1, 2, 0, 0 ,0 ,0 };
-        int[] nr2 = new int[]{8, 3, 0, 0 ,0 ,0 };
+        int[] nr1 = new int[]{1, 2, 0, 0, 0, 0};
+        int[] nr2 = new int[]{8, 3, 0, 0, 0, 0};
         for (int i : ex3.sum(nr1, nr2)) {
             System.out.print(i + " ");
         }
@@ -53,8 +55,8 @@ public class Main {
         System.out.println();
 
         ex4 ex4 = new ex4();
-        int[] key = new int[]{ 60 };
-        int[] usb = new int[]{8 ,12 };
+        int[] key = new int[]{60};
+        int[] usb = new int[]{8, 12};
         System.out.println(ex4.afford(key, usb, 60));
     }
 }
