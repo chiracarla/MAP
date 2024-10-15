@@ -35,4 +35,34 @@ public class ex4 {
         }
         return max;
     }
+
+    public int afford(int[] keyboard, int[] usb, int budget){
+        int max = 0;
+        int k = keyboard[0];
+        int u = usb[0];
+        int lastk = 0, lastu = 0, ki = 0, ui = 0;
+        while(k + u <= budget && ki < keyboard.length && ui < usb.length){
+            lastk = k;
+            lastu = u;
+            ui ++;
+            if(ui == usb.length){
+                ki++;
+                ui = 0;
+            }
+            k = keyboard[ki];
+            u = usb[ui];
+        }
+        if(ki == keyboard.length || ui == usb.length){
+            if((lastk + lastu) <= budget && (lastk + lastu) > 0){
+                return lastu + lastk;
+            }
+            else{
+                return -1;
+            }
+        }
+        else if((lastk + lastu) <= budget && (lastk + lastu) > 0){
+            return lastu + lastk;
+        }
+        return -1;
+    }
 }

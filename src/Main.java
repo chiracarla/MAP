@@ -1,7 +1,7 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 import lab1.*;
-
+import static org.junit.Assert.assertEquals;
 import java.util.ArrayList;
 
 public class Main {
@@ -10,16 +10,17 @@ public class Main {
         // to see how IntelliJ IDEA suggests fixing it.
         ex1 ex1 = new ex1();
         int[] test = new int[]{29, 37, 38, 41, 84, 67};
-//        ArrayList<Integer> final = ex1.failedGrades(new int[]{40, 50, 38, 70});
-//        for(int i = 0; i< ex1.failedGrades(new int[40, 50, 38, 70]).length; i++){
-//            System.out.println(ex1.failedGrades(new int[]{40, 50, 38, 70})[i]);
-//        }
-//        System.out.println(ex1.failedGrades(new ArrayList<Integer>{40, 50, 38, 70}));
-//        system.ex1.failedGrades([40, 50, 38, 70]);
+
+        ArrayList<Integer> expected = new ArrayList<>();
+        expected.add(29);
+        expected.add(37);
+        expected.add(38);
+        assertEquals(expected, ex1.failedGrades(test));
 
         for (int i : ex1.roundedGrades(test)) {
-            System.out.println(i);
+            System.out.print(i + " ");
         }
+        System.out.println();
         System.out.println(ex1.maxRounded(test));
         System.out.println(ex1.average(test));
         System.out.printf("%.2f%n", ex1.average(test));
@@ -35,16 +36,25 @@ public class Main {
         int[] nr1 = new int[]{1, 2, 0, 0 ,0 ,0 };
         int[] nr2 = new int[]{8, 3, 0, 0 ,0 ,0 };
         for (int i : ex3.sum(nr1, nr2)) {
-            System.out.println(i);
+            System.out.print(i + " ");
         }
+        System.out.println();
         for (int i : ex3.dif(nr2, nr1)) {
-            System.out.println(i);
+            System.out.print(i + " ");
         }
+        System.out.println();
         for (int i : ex3.mul(nr2, 2)) {
-            System.out.println(i);
+            System.out.print(i + " ");
         }
+        System.out.println();
         for (int i : ex3.div(nr1, 3)) {
-            System.out.println(i);
+            System.out.print(i + " ");
         }
+        System.out.println();
+
+        ex4 ex4 = new ex4();
+        int[] key = new int[]{ 60 };
+        int[] usb = new int[]{8 ,12 };
+        System.out.println(ex4.afford(key, usb, 60));
     }
 }
