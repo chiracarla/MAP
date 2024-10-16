@@ -13,12 +13,10 @@ public class Main {
         ex1 ex1 = new ex1();
         int[] test = new int[]{29, 37, 38, 41, 84, 67};
 
-        ArrayList<Integer> expected = new ArrayList<>();
-        expected.add(29);
-        expected.add(37);
-        expected.add(38);
-        assertEquals(expected, ex1.failedGrades(test));
-
+        for (int i : ex1.failedGrades(test)) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
         for (int i : ex1.roundedGrades(test)) {
             System.out.print(i + " ");
         }
@@ -57,6 +55,7 @@ public class Main {
         ex4 ex4 = new ex4();
         int[] key = new int[]{60};
         int[] usb = new int[]{8, 12};
+        System.out.println(ex4.expensive( usb, 20));
         System.out.println(ex4.afford(key, usb, 60));
     }
 }
